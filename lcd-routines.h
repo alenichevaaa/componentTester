@@ -5,7 +5,7 @@
 void lcd_data(unsigned char temp1);
 void lcd_command(unsigned char temp1);
 void lcd_send(unsigned char data);
-void lcd_string(char *data);
+void lcd_string(const char *data);
 void lcd_enable(void);
 void lcd_init(void);
 void lcd_clear(void);
@@ -15,10 +15,10 @@ void lcd_eep_string(const unsigned char *data);
 #define CMD_SetEntryMode         0x04
 #define CMD_SetDisplayAndCursor  0x08
 #define CMD_SetIFOptions         0x20
-#define CMD_SetCGRAMAddress      0x40    // für Custom-Zeichen
+#define CMD_SetCGRAMAddress      0x40    // fï¿½r Custom-Zeichen
 #define CMD_SetDDRAMAddress      0x80    // zum Cursor setzen
 
-//Makros für LCD
+//Makros fï¿½r LCD
 #define Line1() SetCursor(1,0)	//An den Anfang der 1. Zeile springen
 #define Line2() SetCursor(2,0)	//An den Anfang der 2. Zeile springen
 
@@ -28,14 +28,14 @@ void lcd_eep_string(const unsigned char *data);
 
 //Eigene Zeichen
 #define LCD_CHAR_OMEGA  244	//Omega-Zeichen
-#define LCD_CHAR_U  228		//µ-Zeichen
+#define LCD_CHAR_U  228		//ï¿½-Zeichen
 #define LCD_CHAR_DIODE  0	//Dioden-Icon; wird als Custom-Character erstellt
   
 // LCD Befehle
  
 #define CLEAR_DISPLAY 0x01
  
-// Pinbelegung für das LCD, an verwendete Pins anpassen
+// Pinbelegung fï¿½r das LCD, an verwendete Pins anpassen
  
 #define LCD_PORT      PORTD
 #define LCD_DDR       DDRD
